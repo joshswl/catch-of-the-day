@@ -14,7 +14,7 @@ class StorePicker extends React.Component {
                 { /* this is how to comment */ }
                 <h2>Please Enter A Store</h2>
                 <input type="text" required placeholder="Store Name"
-                    defaultValue={getFunName()} />
+                    defaultValue={getFunName()} ref={(input) => { this.storeInput = input }} />
                 <button type="submit">Visit Store -></button>
             </form>
         )
