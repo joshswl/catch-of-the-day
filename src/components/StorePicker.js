@@ -12,7 +12,7 @@ class StorePicker extends React.Component {
         event.preventDefault();
         console.log('You changed the URL');
         // first grab the text from the box
-        console.log(this);
+        console.log(this.storeInput.value);
         // second transition from / to /store/:storeId
     }
     render() {
