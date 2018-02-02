@@ -20,4 +20,4 @@ const Root = () => {
     )
 }
 
-render(<Root/>, document.querySelector('#main'));
+render(<Root />, document.querySelector('#main'));
