@@ -18,7 +18,7 @@ class App extends React.Component {
         // update our state
         const fishes = { ...this.state.fishes };
         // add in our new fish
-
+        const timestamp = Date.now();
         // set state
     }
     render() {
