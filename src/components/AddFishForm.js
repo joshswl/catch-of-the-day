@@ -11,7 +11,7 @@ class AddFishForm extends React.Component {
             description: this.description.value,
             image: this.image.value,
         }
-        console.log(fish);
+        this.props.addFish(fish);
     }
     render() {
         return (
