@@ -1,5 +1,5 @@
 import React from 'react';
-import AddFishform from './AddFishForm';
+import AddFishForm from './AddFishForm';
 
 class Inventory extends React.Component {
     render() {
