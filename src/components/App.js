@@ -6,10 +6,20 @@ import Inventory from './Inventory';
 class App extends React.Component {
     constructor() {
         super();
+
+        //get initial state
         this.state = {
             fishes: {},
             order: {}
         };
+    }
+
+    addFish(fish) {
+        // update our state
+        const fishes = { ...this.state.fishes };
+        // add in our new fish
+
+        // set state
     }
     render() {
         return (
