@@ -35,6 +35,12 @@ class App extends React.Component {
         })
     }
 
+    addToOrder(key) {
+        // take a copy of our state
+        const order = { ...this.state.order };
+
+    }
+
     render() {
         return (
             <div className="catch-of-the-day">
