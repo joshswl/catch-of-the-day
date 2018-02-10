@@ -34,7 +34,8 @@ class App extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem(`order-${this.props.params.storeId}`)
+        localStorage.setItem(`order-${this.props.params.storeId}`,
+            JSON.stringify(nextState.order));
     }
 
     addFish(fish) {
