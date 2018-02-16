@@ -34,6 +34,25 @@ class Inventory extends React.Component {
 
   authHandler(err, authData) {
     console.log(authData);
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    // grab the store info
+    const storeRef = base.database().ref(this.props.storeId);
+
+    // query the firebase once for the store data
+    storeRef.once('value', (snapshot) => {
+      const data = snapshot.val() || {};
+
+      // claim it as our own fi there is no owner already
+      if (!data.owner) {
+        storeRef.set({
+          owner: authData.user.uid
+        });
+      }
+    });
   }
 
   renderLogin() {
@@ -100,6 +119,7 @@ Inventory.propTypes = {
   removeFish: React.PropTypes.func.isRequired,
   addFish: React.PropTypes.func.isRequired,
   loadSamples: React.PropTypes.func.isRequired,
+  storeId: React.PropTypes.string.isRequired
 }
 
 export default Inventory;
