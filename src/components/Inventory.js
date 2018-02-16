@@ -6,6 +6,7 @@ class Inventory extends React.Component {
     super();
     this.renderInventory = this.renderInventory.bind(this);
     this.renderLogin = this.renderLogin.bind(this);
+    this.authenticate = this.authenticate.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       uid: null,
@@ -22,6 +23,10 @@ class Inventory extends React.Component {
     }
     this.props.updateFish(key, updatedFish);
     console.log(e.target.name, e.target.value);
+  }
+
+  authenticate(provider) {
+    console.log(`Trying to log in with ${provider}`)
   }
 
   renderLogin() {
