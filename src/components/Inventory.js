@@ -52,6 +52,11 @@ class Inventory extends React.Component {
           owner: authData.user.uid
         });
       }
+
+      this.setState({
+        uid: authData.user.uid,
+        owner: data.owner || authData.user.uid
+      });
     });
   }
 
